@@ -13,8 +13,8 @@
 * * MILESTONE 2:
 * *Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
+* *BONUS 1:
+* *Trasformare la stringa foto in una immagine effettiva
 
 BONUS 2:
 Organizzare i singoli membri in card/schede
@@ -71,6 +71,7 @@ for (let index = 0; index < team.length; index++) {
 }
 
 //VISUALIZZATO IN PAGINA
+/*
 let table = document.querySelector("tbody");
 
 for (let i = 0; i < team.length; i++) {
@@ -95,7 +96,7 @@ for (let i = 0; i < team.length; i++) {
 
     table.append(tr);
 }
-
+*/
 
 //INSERISCO UN'ALTRO UTENTE AL MIO TEAM
 
@@ -117,3 +118,5 @@ function Person(UserName, UserRole, UserPhoto){
     return person;
 }
 */
+
+

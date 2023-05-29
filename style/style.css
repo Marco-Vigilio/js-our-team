@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*
 table{
     margin: 0 auto;
 }
@@ -11,4 +11,47 @@ table{
 th, td{
     padding: 2rem;
     border: 2px solid black;
+}
+*/
+.flex{
+    display: flex;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-bet{
+    justify-content: space-between;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+span{
+    display: block;
+}
+
+p{
+    padding: 2rem 10rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.container{
+    margin: 2rem auto;
+    width: 1000px;
+    text-align: center;
+    background-color: yellow;
+}
+
+.item{
+    background-color: red;
+    width: 300px;
+}
+
+img{
+    width: 100%;
 }
