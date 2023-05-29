@@ -72,27 +72,22 @@ for (let index = 0; index < team.length; index++) {
 
 //VISUALIZZATO IN PAGINA
 let table = document.querySelector("tbody");
-let tr;
-
-let tdName;
-let tdRole;
-let tdPhoto;
-
-let img;
 
 for (let i = 0; i < team.length; i++) {
-    tr  = document.createElement("tr");
+    const tr  = document.createElement("tr");
 
-    tdName = document.createElement("td");
+    const tdName = document.createElement("td");
     tdName.append(team[i].name);
 
-    tdRole = document.createElement("td");
+    const tdRole = document.createElement("td");
     tdRole.append(team[i].role);
 
 
-    tdPhoto = document.createElement("td");
-    img = team[i].photo;
-    tdPhoto.innerHTML = `<img src="img-our-team/img/${img}">`;
+    const tdPhoto = document.createElement("td");
+    const picture = team[i].photo;
+    const img = document.createElement("img");
+    img.src = `img-our-team/img/${picture}`;
+    tdPhoto.append(img);
 
     tr.append(tdName);
     tr.append(tdRole);
