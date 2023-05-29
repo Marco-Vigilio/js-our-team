@@ -123,33 +123,38 @@ function Person(UserName, UserRole, UserPhoto){
 let boxItems = document.querySelector("div.items");
 
 
+let divItem;
+let nameSpan;
+let roleSpan;
+let picture;
+let img;
 
-
-
-
-for (let index = 0; index < team.length; index++) {
+for (let index = 0; index < 2; index++) {
     let divRow = document.createElement("div");
     divRow.classList.add("row" ,"flex", "flex-space-bet");
+    
+    for (let index = 0; index < team.length; index++) {
 
-    let divItem = document.createElement("div");
-    divItem.classList.add("item");
-
-    let img = document.createElement("img");
-
-    let nameSpan = document.createElement("span");
-    nameSpan.classList.add("name");
-    let roleSpan = document.createElement("span");
-
-    nameSpan.append(team[index].name);
-    roleSpan.append(team[index].role);
-
-    let picture = team[index].photo;
-    img.src = `img-our-team/img/${picture}`
-
-    boxItems.append(divRow);
-    divRow.append(divItem);
-    divItem.append(img);
-    divItem.append(nameSpan);
-    divItem.append(roleSpan);
+        divItem = document.createElement("div");
+        divItem.classList.add("item");
+    
+        img = document.createElement("img");
+    
+        nameSpan = document.createElement("span");
+        nameSpan.classList.add("name");
+        roleSpan = document.createElement("span");
+    
+        nameSpan.append(team[index].name);
+        roleSpan.append(team[index].role);
+    
+        picture = team[index].photo;
+        img.src = `img-our-team/img/${picture}`
+    
+        boxItems.append(divRow);
+        divRow.append(divItem);
+        divItem.append(img);
+        divItem.append(nameSpan);
+        divItem.append(roleSpan);
+    }
 }
 
