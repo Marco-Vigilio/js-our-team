@@ -28,6 +28,7 @@ E ricordiamoci che console.log() è nostro amico!
  * 
  */
 
+
 let team = [
     {
         name: "Wayne Barnett",
@@ -61,12 +62,42 @@ let team = [
     },
 ];
 
-console.log(team);
+//console.log(team);
 
+//VISUALIZZATO IN CONSOLE
 for (let index = 0; index < team.length; index++) {
     console.log(team[index].name , team[index].role, team[index].photo);
     
 }
+
+//VISUALIZZATO IN PAGINA
+let table = document.querySelector("tbody");
+//let tr = document.querySelector("tr.da-qui");
+let tr;
+
+let tdName;
+let tdRole;
+let tdPhoto;
+
+for (let i = 0; i < team.length; i++) {
+        tr  = document.createElement("tr");
+
+        tdName = document.createElement("td");
+        tdName.append(team[i].name);
+
+        tdRole = document.createElement("td");
+        tdRole.append(team[i].role);
+
+        tdPhoto = document.createElement("td");
+        tdPhoto.append(team[i].photo);
+
+        tr.append(tdName);
+        tr.append(tdRole);
+        tr.append(tdPhoto);
+
+        table.append(tr);
+}
+
 
 //INSERISCO UN'ALTRO UTENTE AL MIO TEAM
 

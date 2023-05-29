@@ -3,3 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+table{
+    margin: 0 auto;
+}
+
+th, td{
+    padding: 2rem;
+    border: 2px solid black;
+}
