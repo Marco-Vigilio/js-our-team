@@ -54,13 +54,11 @@ p{
     text-align: center;
 }
 
-.row{
-    padding: 2rem;
-}
 
 .item{
     background-color: white;
     width: 300px;
+    margin: 1rem 0;
 }
 
 img{

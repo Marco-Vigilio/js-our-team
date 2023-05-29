@@ -32,7 +32,7 @@ E ricordiamoci che console.log() è nostro amico!
 let team = [
     {
         name: "Wayne Barnett",
-        role: "ounder & CEO",
+        role: "Founder & CEO",
         photo: "wayne-barnett-founder-ceo.jpg"
     },
     {
@@ -98,6 +98,39 @@ for (let i = 0; i < team.length; i++) {
 }
 */
 
+
+let boxItems = document.querySelector("div.items");
+boxItems.classList.add("row" ,"flex", "flex-space-bet", "flex-wrap");
+
+let divItem;
+let nameSpan;
+let roleSpan;
+let picture;
+let img;
+    
+    for (let index = 0; index < team.length; index++) {
+
+        divItem = document.createElement("div");
+        divItem.classList.add("item");
+    
+        img = document.createElement("img");
+    
+        nameSpan = document.createElement("span");
+        nameSpan.classList.add("name");
+        roleSpan = document.createElement("span");
+    
+        nameSpan.append(team[index].name);
+        roleSpan.append(team[index].role);
+    
+        picture = team[index].photo;
+        img.src = `img-our-team/img/${picture}`
+    
+        boxItems.append(divItem);
+        divItem.append(img);
+        divItem.append(nameSpan);
+        divItem.append(roleSpan);
+    }
+
 //INSERISCO UN'ALTRO UTENTE AL MIO TEAM
 
 /*
@@ -118,43 +151,3 @@ function Person(UserName, UserRole, UserPhoto){
     return person;
 }
 */
-
-
-let boxItems = document.querySelector("div.items");
-
-
-let divItem;
-let nameSpan;
-let roleSpan;
-let picture;
-let img;
-
-for (let index = 0; index < 2; index++) {
-    let divRow = document.createElement("div");
-    divRow.classList.add("row" ,"flex", "flex-space-bet");
-    
-    for (let index = 0; index < team.length; index++) {
-
-        divItem = document.createElement("div");
-        divItem.classList.add("item");
-    
-        img = document.createElement("img");
-    
-        nameSpan = document.createElement("span");
-        nameSpan.classList.add("name");
-        roleSpan = document.createElement("span");
-    
-        nameSpan.append(team[index].name);
-        roleSpan.append(team[index].role);
-    
-        picture = team[index].photo;
-        img.src = `img-our-team/img/${picture}`
-    
-        boxItems.append(divRow);
-        divRow.append(divItem);
-        divItem.append(img);
-        divItem.append(nameSpan);
-        divItem.append(roleSpan);
-    }
-}
-
