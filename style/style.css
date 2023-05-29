@@ -32,6 +32,14 @@ th, td{
     justify-content: space-between;
 }
 
+.flex-around{
+    justify-content: space-around;
+}
+
+.flex-end{
+    justify-content: end;
+}
+
 .flex-wrap{
     flex-wrap: wrap;
 }
@@ -48,21 +56,29 @@ p{
     line-height: 2.3rem;
 }
 
+img{
+    width: 100%;
+}
+
+.new{
+    border: 0;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    letter-spacing: .12rem;
+    background-color: rgb(170, 240, 193);
+    cursor: pointer;
+}
+
 .container{
     margin: 2rem auto;
     width: 1000px;
     text-align: center;
 }
 
-
 .item{
     background-color: white;
     width: 300px;
     margin: 1rem 0;
-}
-
-img{
-    width: 100%;
 }
 
 .name{

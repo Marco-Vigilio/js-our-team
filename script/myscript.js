@@ -13,11 +13,11 @@
 * * MILESTONE 2:
 * *Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-* *BONUS 1:
-* *Trasformare la stringa foto in una immagine effettiva
+* * BONUS 1:
+* * Trasformare la stringa foto in una immagine effettiva
 
-BONUS 2:
-Organizzare i singoli membri in card/schede
+* * BONUS 2:
+* * Organizzare i singoli membri in card/schede
 Consigli del giorno:
 
 Ragioniamo come sempre a step.
@@ -100,7 +100,7 @@ for (let i = 0; i < team.length; i++) {
 
 
 let boxItems = document.querySelector("div.items");
-boxItems.classList.add("row" ,"flex", "flex-space-bet", "flex-wrap");
+boxItems.classList.add("row" ,"flex","flex-around", "flex-wrap");
 
 let divItem;
 let nameSpan;
@@ -133,6 +133,41 @@ let img;
 
 //INSERISCO UN'ALTRO UTENTE AL MIO TEAM
 
+const button = document.querySelector("button");
+button.addEventListener("click", function(){
+    alert("Insert a new User");
+    let nome = prompt("Insert your name");
+    let ruolo = prompt("Insert your role");
+    let foto = prompt("Insert your link photo");
+    team.push(Person(nome, ruolo, foto));
+
+    console.log(team);
+    
+    boxItems.innerHTML = "";
+
+    for (let index = 0; index < team.length; index++) {
+
+        divItem = document.createElement("div");
+        divItem.classList.add("item");
+    
+        img = document.createElement("img");
+    
+        nameSpan = document.createElement("span");
+        nameSpan.classList.add("name");
+        roleSpan = document.createElement("span");
+    
+        nameSpan.append(team[index].name);
+        roleSpan.append(team[index].role);
+    
+        picture = team[index].photo;
+        img.src = `img-our-team/img/${picture}`
+    
+        boxItems.append(divItem);
+        divItem.append(img);
+        divItem.append(nameSpan);
+        divItem.append(roleSpan);
+    }
+});
 /*
 let nome = prompt("Insert your name");
 let ruolo = prompt("Insert your role");
@@ -140,6 +175,7 @@ let foto = prompt("Insert your link photo");
 team.push(Person(nome, ruolo, foto));
 
 console.log(team);
+*/
 
 function Person(UserName, UserRole, UserPhoto){
     let person;
@@ -150,4 +186,3 @@ function Person(UserName, UserRole, UserPhoto){
     }
     return person;
 }
-*/
