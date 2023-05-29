@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #f5f5f1;
+    font-family: 'Open Sans', sans-serif;
+}
+
 /*
 table{
     margin: 0 auto;
@@ -32,26 +38,36 @@ th, td{
 
 span{
     display: block;
+    color: gray;
+    padding: .5rem 0;
 }
 
 p{
-    padding: 2rem 10rem;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    padding: 3rem 12rem;
+    font-size: 1rem;
+    line-height: 2.3rem;
 }
 
 .container{
     margin: 2rem auto;
     width: 1000px;
     text-align: center;
-    background-color: yellow;
+}
+
+.row{
+    padding: 2rem;
 }
 
 .item{
-    background-color: red;
+    background-color: white;
     width: 300px;
 }
 
 img{
     width: 100%;
+}
+
+.name{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
 }
