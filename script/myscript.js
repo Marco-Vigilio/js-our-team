@@ -10,8 +10,8 @@
 * * MILESTONE 1:
 * * Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
+* * MILESTONE 2:
+* *Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
@@ -72,30 +72,33 @@ for (let index = 0; index < team.length; index++) {
 
 //VISUALIZZATO IN PAGINA
 let table = document.querySelector("tbody");
-//let tr = document.querySelector("tr.da-qui");
 let tr;
 
 let tdName;
 let tdRole;
 let tdPhoto;
 
+let img;
+
 for (let i = 0; i < team.length; i++) {
-        tr  = document.createElement("tr");
+    tr  = document.createElement("tr");
 
-        tdName = document.createElement("td");
-        tdName.append(team[i].name);
+    tdName = document.createElement("td");
+    tdName.append(team[i].name);
 
-        tdRole = document.createElement("td");
-        tdRole.append(team[i].role);
+    tdRole = document.createElement("td");
+    tdRole.append(team[i].role);
 
-        tdPhoto = document.createElement("td");
-        tdPhoto.append(team[i].photo);
 
-        tr.append(tdName);
-        tr.append(tdRole);
-        tr.append(tdPhoto);
+    tdPhoto = document.createElement("td");
+    img = team[i].photo;
+    tdPhoto.innerHTML = `<img src="img-our-team/img/${img}">`;
 
-        table.append(tr);
+    tr.append(tdName);
+    tr.append(tdRole);
+    tr.append(tdPhoto);
+
+    table.append(tr);
 }
 
 
